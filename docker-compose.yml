@@ -1,0 +1,14 @@
+version: '3'
+services:
+    ubuntu:
+        container_name: ubuntu_dev
+        image: ubuntu:18.04
+        network_mode: host
+        # networks:
+        #     - backend
+        # restart: always
+        restart: unless-stopped
+        command: "tail -f /dev/null"
+# networks:
+#     backend:
+#         driver: bridge
